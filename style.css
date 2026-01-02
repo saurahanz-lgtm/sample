@@ -1,0 +1,364 @@
+:root{
+  --bg: #0f0f11;
+  --card: #121214;
+  --muted: #9aa0a6;
+  --accent: #f5c518;
+  --accent-2: #4da6ff;
+  --glass: rgba(255,255,255,0.03);
+  --max-width: 1100px;
+  --radius: 12px;
+  --gap: 18px;
+  --text: #ffffff;
+}
+
+*{box-sizing:border-box}
+html,body{
+    height:100%;
+    margin:0;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* Container */
+.container{
+    max-width:var(--max-width); 
+    margin:0 auto; padding:22px;
+}
+
+/* Header / Nav */
+.header{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    border-bottom:1px solid rgba(255,255,255,0.03);
+}
+
+.header-inner{
+    display:flex;
+    align-items:center; 
+    gap:18px;
+}
+
+.web-name{
+    font-weight:700; 
+    text-decoration:none; 
+    color:var(--accent); 
+    font-size:1.1rem;
+}
+
+.main-nav ul{
+    list-style:none; 
+    margin:0; 
+    padding:0; 
+    display:flex; 
+    gap:14px; 
+    align-items:center;
+}
+
+.main-nav a{
+    color:var(--muted); 
+    text-decoration:none; 
+    padding:8px 10px; 
+    border-radius:8px;
+}
+
+.main-nav a:hover, .main-nav a.active{
+    background:var(--glass); 
+    color:var(--text);
+}
+
+/* Actions */
+.actions{
+    margin-left:auto;
+}
+
+.actions button{
+    background:transparent; 
+    border:1px solid rgba(255,255,255,0.05); 
+    color:var(--muted); 
+    padding:8px 10px; 
+    border-radius:8px; 
+    cursor:pointer;
+}
+
+.actions button:hover{
+    color:var(--text); 
+    border-color:var(--accent);
+}
+
+/* main */
+.main-section{
+    padding:48px 0; 
+    text-align:left;
+}
+
+.main-section .container{
+    display:flex; 
+    gap:24px; 
+    align-items:center; 
+    justify-content:space-between; 
+    flex-wrap:wrap;
+}
+
+.main-section h1{
+    font-size:2rem; 
+    margin:0 0 8px 0; 
+    color:var(--accent);
+}
+
+.lead{
+    color:var(--muted); 
+    margin:0 0 16px 0;
+}
+
+.shortcut-btn{
+    display:inline-block; 
+    background:var(--accent); 
+    color:#000; 
+    padding:10px 16px; 
+    border-radius:10px; 
+    text-decoration:none; 
+    font-weight:700;
+}
+
+/* grid */
+.grid-3{
+    display:grid; 
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); 
+    gap:18px; 
+    margin-top:20px;
+}
+
+.items{
+    background:var(--card); 
+    border-radius:12px; 
+    padding:18px; 
+    border:1px solid rgba(255,255,255,0.03);
+}
+
+/* Controls area on Collection */
+.controls{
+    display:flex; 
+    flex-wrap:wrap; 
+    gap:12px; 
+    align-items:center; 
+    margin:18px 0;
+}
+
+.controls label{
+    color:var(--muted); 
+    width:100%;
+}
+
+.controls select{
+    padding:10px; 
+    border-radius:8px; 
+    border:1px solid rgba(255,255,255,0.06); 
+    background:var(--card); 
+    color:var(--text); 
+    min-width:260px;
+}
+
+.control-buttons{
+    display:flex; 
+    gap:10px; 
+    margin-left:auto;
+}
+
+.btn-primary{
+    background:var(--accent); 
+    color:#000; 
+    border:none; 
+    padding:10px 14px; 
+    border-radius:8px; 
+    font-weight:700; 
+    cursor:pointer;
+}
+
+.btn-ghost{
+    background:transparent; 
+    color:var(--accent); 
+    border:1px solid rgba(245,197,24,0.12); 
+    padding:10px 14px; 
+    border-radius:8px; 
+    cursor:pointer;
+}
+
+/* Collection grid (dynamic) */
+.list-grid{display:grid; 
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); 
+    gap:16px; 
+    margin-top:12px;
+}
+
+.card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); 
+    border-radius:12px; 
+    padding:16px; 
+    border:1px solid rgba(255,255,255,0.03);
+}
+
+/* Card inner layout */
+.card .thumb{
+    width: 100%;
+    height: 180px; /* increase if needed */
+    border-radius:8px; 
+    overflow:hidden;
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    background:#222;
+}
+
+.card .thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill the area, crop excess */
+}
+
+
+.card h3{
+    margin:12px 0 6px 0; 
+    color:var(--accent);
+}
+
+.card p{
+    margin:4px 0; 
+    color:var(--muted); 
+    font-size:0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .header-inner{
+    flex-direction:column; 
+    align-items:flex-start; 
+    gap:10px;
+}
+  .main-section .container{
+    flex-direction:column; 
+    align-items:flex-start;
+}
+  .control-buttons{
+    margin-left:0; 
+    width:100%; 
+    justify-content:space-between;
+}
+
+}
+
+/* Footer */
+.footer{
+    margin-top:40px; 
+    padding:18px 0; 
+    border-top:1px solid rgba(255,255,255,0.02); 
+    color:var(--muted); 
+    text-align:center;
+}
+
+/* Form (About) */
+.contact input, .contact textarea{
+    width:100%; 
+    padding:10px; 
+    border-radius:8px; 
+    border:1px solid rgba(255,255,255,0.04); 
+    background:var(--card); 
+    color:var(--text); 
+    margin-top:8px;
+}
+
+.form-actions{
+    display:flex; 
+    gap:10px; 
+    margin-top:12px; 
+    justify-content:flex-start;
+}
+
+/* LIGHT MODE THEME */
+.light-mode {
+  --bg: #ffffff;
+  --card: #f4f4f4;
+  --text: #222222;
+  --muted: #555555;
+  --glass: rgba(0,0,0,0.05);
+  --accent: #f5c518;
+}
+/* POPUP STYLES */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+
+.popup-content {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    color: var(--text);
+}
+
+
+.popup-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* CLOSE BUTTON */
+.close {
+    float: right;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* Hover effects */
+.card :hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    border-color: var(--accent);
+}
+
+/* Image styling */
+.card-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+/* Image zoom on hover */
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* Info section */
+.card-info {
+    margin-top: 10px;
+}
+
+.card-info h3 {
+    margin: 5px 0;
+    color: var(--accent);
+}
+
+.card-info p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* Light Mode Support */
+.light-mode .card {
+    background: var(--card);
+    color: var(--text);
+}
+

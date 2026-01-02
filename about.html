@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aperture Triangle Hub — About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="web-name" href="index.html">Aperture Triangle Hub</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+  <button id="themeToggle">Light Mode</button>
+</div>
+  </header>
+
+  <main>
+    <section class="container about-page">
+      <h2>About this Project</h2>
+      <p class="lead">This mini-site demonstrates the aperture / shutter / ISO relationships using interactive examples and filters.</p>
+
+      <section class="contact">
+        <h3>Contact / Feedback</h3>
+        <form id="contactForm" action="#" method="post" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Feedback or questions"></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Send</button>
+            <button type="reset" class="btn-ghost">Reset</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 — Aperture Triangle Hub</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

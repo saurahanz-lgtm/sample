@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aperture Triangle Hub — Collection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="web-name" href="index.html">Aperture Triangle Hub</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html" class="active">Collection</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+  <button id="themeToggle">Light Mode</button>
+</div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Exposure Triangle Examples</h2>
+      <p class="lead">Choose a preset filter and click <strong>Apply Filter</strong> — the list updates after applying.</p>
+
+      <div class="controls">
+        <label for="filterSelect">Filter option</label>
+        <select id="filterSelect" aria-label="Filter examples">
+          <option value="">— Choose filter —</option>
+
+          <optgroup label="Aperture">
+            <option value="wide">Wide Aperture (f/1.4 – f/2.8)</option>
+            <option value="mid">Mid Aperture (f/3.5 – f/5.6)</option>
+            <option value="narrow">Narrow Aperture (f/8 – f/16)</option>
+          </optgroup>
+
+          <optgroup label="Shutter">
+            <option value="fast">Fast Shutter (1/250 ↑)</option>
+            <option value="medium">Medium Shutter (1/125 – 1/60)</option>
+            <option value="slow">Slow Shutter (1/30 ↓)</option>
+          </optgroup>
+
+          <optgroup label="ISO">
+            <option value="lowISO">Low ISO (100 – 200)</option>
+            <option value="midISO">Medium ISO (400 – 800)</option>
+            <option value="highISO">High ISO (1600 ↑)</option>
+          </optgroup>
+        </select>
+
+        <div class="control-buttons">
+          <button id="applyFilterBtn" class="btn-primary">Apply Filter</button>
+          <button id="showAllBtn" class="btn-ghost">Show All</button>
+        </div>
+      </div>
+
+      <!-- dynamic list -->
+      <section id="collectionGrid" class="list-grid" aria-live="polite"></section>
+    </section>
+  </main>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="closepopup" class="close">&times;</span>
+    <img id="popupImage" src="" alt="">
+    <h2 id="popupTitle"></h2>
+    <p><strong>Aperture:</strong> <span id="popupAperture"></span></p>
+    <p><strong>Shutter Speed:</strong> <span id="popupShutter"></span></p>
+    <p><strong>ISO:</strong> <span id="popupISO"></span></p>
+  </div>
+</div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 — Aperture Triangle Hub</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
